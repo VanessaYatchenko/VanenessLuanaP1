@@ -9,16 +9,45 @@
 
 <div class="div">
     <form class="form">
-        <h1>Usuários</h1>
-    
-        <label for="nome">Lista de Usuários</label>
-        <p>Faustino</p>
-        <p>Vanessa</p>
-        <p>Luana</p>
+        <h1>Lista de Usuários</h1>
+        <label for="nome">Usuários</label>
+        <div id="list_usuarios">
+            <!-- A lista de usuários será preenchida dinamicamente -->
+        </div>
         <input type="button" onclick="location.href='editar_usuario.html'" value="Editar" class="btn" />
-        <input type="submit" value="Excluir" class="btn" />
     </form>
     <button onclick="location.href='home.html'" class="btnhome">Voltar para a página inicial</button> 
 </div>
-
+<script>
+    // Função para buscar os usuários e exibir na lista
+    async function fetchUsuarios() {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/usuarios/');
+        if (!response.ok) {
+          throw new Error(`Erro: ${response.status}`);
+        }
+        const data = await response.json();
+  
+        if (data.usuarios && Array.isArray(data.usuarios)) {
+          const listUsuariosDiv = document.getElementById('list_usuarios');
+          listUsuariosDiv.innerHTML = ''; // Limpa o conteúdo anterior
+  
+          data.usuarios.forEach(usuario => {
+            const usuarioElement = document.createElement('p');
+            usuarioElement.textContent = `${usuario.nome} - ${usuario.email}`;
+            listUsuariosDiv.appendChild(usuarioElement);
+          });
+        } else {
+          console.error('Formato inesperado da resposta:', data);
+        }
+      } catch (error) {
+        console.error('Erro ao buscar usuários:', error);
+        const listUsuariosDiv = document.getElementById('list_usuarios');
+        listUsuariosDiv.innerHTML = '<p>Erro ao carregar usuários. Tente novamente mais tarde.</p>';
+      }
+    }
+  
+    // Chama a função ao carregar a página
+    window.onload = fetchUsuarios;
+  </script>
 </html>
