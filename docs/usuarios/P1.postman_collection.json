@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "3367e21e-1a5f-4ec7-a8aa-7167817c1efe",
-		"name": "Prova",
+		"_postman_id": "1224dbb2-bd9e-4cdd-9f2f-ef97b686f5fa",
+		"name": "P1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "43744814"
 	},
 	"item": [
 		{
-			"name": "TestandoGet",
+			"name": "TestdoGet",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -29,12 +29,12 @@
 			"response": []
 		},
 		{
-			"name": "TestandoKey",
+			"name": "TestedoUsuario",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/usuarios?nome",
+					"raw": "http://127.0.0.1:8000/usuarios/6",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -44,23 +44,39 @@
 					],
 					"port": "8000",
 					"path": [
-						"usuarios"
-					],
-					"query": [
-						{
-							"key": "nome",
-							"value": null
-						}
+						"usuarios",
+						"6"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "TestandoUsuario",
+			"name": "TestedaKey",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/usuarios/?Nome",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"usuarios",
+						""
+					],
+					"query": [
+						{
+							"key": "Nome",
+							"value": null
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -71,7 +87,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Luana\",\r\n  \"email\": \"Luana.diva@email.com\",\r\n  \"senha\": \"getdiva\"\r\n}",
+					"raw": "{\r\n  \"nome\": \"Alef\",\r\n  \"email\": \"Alef.obana@email.com\",\r\n  \"senha\": \"AlefLeo\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,7 +117,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/usuarios/5",
+					"raw": "http://127.0.0.1:8000/usuarios/3",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -112,7 +128,7 @@
 					"port": "8000",
 					"path": [
 						"usuarios",
-						"5"
+						"3"
 					]
 				}
 			},
@@ -125,7 +141,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Luana\",\r\n  \"email\": \"Luana.diva@email.com\",\r\n  \"senha\": \"getdiva\",\r\n  \"idade\": \"20\"\r\n}",
+					"raw": "{\r\n  \"nome\": \"Alef\",\r\n  \"email\": \"Alef.obana@email.com\",\r\n  \"senha\": \"AlefLeo\",\r\n  \"idade\": \"20\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -133,7 +149,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/usuarios/7?Content-Type=application/json",
+					"raw": "http://127.0.0.1:8000/usuarios/6?Content-Type=application/json",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -144,7 +160,7 @@
 					"port": "8000",
 					"path": [
 						"usuarios",
-						"7"
+						"6"
 					],
 					"query": [
 						{

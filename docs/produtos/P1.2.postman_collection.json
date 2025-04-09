@@ -59,7 +59,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Uva\",\r\n  \"preco\": 12.00,\r\n  \"estoque\": 180,\r\n  \"categoria\": \"frutas\"\r\n}",
+					"raw": "{\r\n  \"nome\": \"Sapato\",\r\n  \"preco\": 200,\r\n  \"estoque\": 50,\r\n  \"categoria\": \"calcado\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -122,7 +122,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/produtos/2",
+					"raw": "http://127.0.0.1:8000/produtos/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -133,7 +133,7 @@
 					"port": "8000",
 					"path": [
 						"produtos",
-						"2"
+						"1"
 					]
 				}
 			},
