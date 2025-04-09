@@ -7,7 +7,7 @@
 
 ##  👩‍🎓​Integrantes
 📧 luana.chaves@fatec.sp.gov.br  
-📧 vanessa.macedo@fatec.sp.gov.br  
+📧 vanessa.macedo01@fatec.sp.gov.br  
 
 ---
 
